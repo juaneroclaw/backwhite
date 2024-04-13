@@ -1,4 +1,9 @@
-.tilt-neon-h1 {
+:root{
+    --color-button: #BFCFE7;
+    --color-button-hover: #525CEB;
+    --color-button-background: #525CEB;
+}
+body {
     font-family: "Tilt Neon", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -6,4 +11,10 @@
     font-variation-settings:
       "XROT" 0,
       "YROT" 0;
+  }
+  .btn-app {
+    color:  var(--color-button) !important;
+  }
+  .btn-inicio:hover{
+        background-color: var(--color-button-background) !important;
   }
