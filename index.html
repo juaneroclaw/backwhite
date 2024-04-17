@@ -12,17 +12,24 @@
     <title>Back-White</title>
 </head>
 <body>
-    <header>
+    <header class="fondo sticky-top">
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand mx-5" href="">
+            <a class="navbar-brand mx-5 fs-2 tit " href="">
                 <i class="fas fa-desktop"></i>
                 Back-White
             </a>
-            <div class="collapse navbar-collapse d-flex justify-content-sm-end" id="navbarSupportedContent">
+            <nav class="navbar fondo d-lg-none">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggleExternalContent">
                 <ul class="navbar-nav me-2 mb-2 mb-lg-0">
-                    <li class="nav-item btn me-2"><a class="nav-link btn-app" href="">Rating ventas</a></li>
-                    <li class="nav-item btn me-2"><a class="btn-app nav-link" href="">Registrarse</a></li>
-                    <li class="nav-item btn btn-inicio me-2"><a class="btn-app nav-link" href="">Iniciar Sesión</a></li>
+                    <li class="nav-item btn me-2 btn-app"><a class="nav-link btn-text" href="">Rating ventas</a></li>
+                    <li class="nav-item btn me-2 btn-app"><a class="btn-text nav-link" href="">Registrarse</a></li>
+                    <li class="nav-item btn btn-inicio me-2"><a class="btn-text nav-link" href="">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </nav>
@@ -39,5 +46,7 @@
     AOS.init();
 </script>
 <script src="https://kit.fontawesome.com/7b5e0c5a94.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
