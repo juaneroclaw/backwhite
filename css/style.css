@@ -1,3 +1,16 @@
+:root{
+  --texto: #BFCFE7;
+  --botones: #525CEB;
+  --fondo: #3D3B40;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tilt Neon", sans-serif;
+  
+
+}
 .tilt-neon-h1 {
     font-family: "Tilt Neon", sans-serif;
     font-optical-sizing: auto;
@@ -7,3 +20,275 @@
       "XROT" 0,
       "YROT" 0;
   }
+  main{
+    color: var(--texto);
+    background-color: var(--fondo);
+  }
+  .inicio{    
+    height: calc(100vh - 52px); /*Adaptar segundo valor de calculo de height a los px del header*/
+    background-image:linear-gradient(to right top, #08080849, #29282873   ), url(https://www.apple.com/v/home/bm/images/heroes/apple-watch-series-9-anim/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
+    background-position: center ;
+    background-size: cover ;    
+    color: var(--texto);
+  }
+  .inicio > h1 {
+    font-size: 70px;
+  }
+  
+  .buscador{
+    margin: 50px;
+    height: 30vh;
+    
+    view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+  .buscador > h2{
+    font-size: 2.5rem;
+  }
+  .inputBuscador{
+    height: 50px;
+    width: 500px;
+    background-color: var(--botones);
+    color: var(--texto);
+    border-radius: 25px;
+    border: solid 3px var(--texto);
+    padding: 0 20px;
+    font-size: 1.2rem;
+  }
+  .inputBuscador::placeholder{      
+    color: var(--texto);    
+  }
+  .botonBuscador{
+    background-color: var(--botones);
+    color: var(--texto);
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: solid 3px var(--texto);
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    transition: .3s ease all;
+  }
+  .botonBuscador:hover{
+    transform: scale(90%);
+  }
+  hr {
+    border: 4px solid #525CEB;
+    border-radius: 25px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    opacity: 1;
+}
+.productos{
+  background-color: var(--fondo);
+  height: 100%;
+  width: 100%; 
+  transition: all 0.5s ease; 
+  
+}
+.product-wrapper{
+  margin-top: 32px;
+  transition: all 0.5s ease;
+}
+.product-container{
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 32px;
+    transition: all 0.5s ease;
+    
+}
+.product-container img {
+  
+
+  border-radius: 8px;
+  background: rgb(82,92,235);
+  background: radial-gradient(circle, rgba(82,92,235,1) 0%, rgba(191,207,231,1) 100%);
+  
+    width: 200px;
+    height: 300px;
+    box-shadow:2px 2px 2px 2px #000,
+    -2px -2px   2px 2px #000,
+    -2px 2px  2px 2px  #000,
+    2px -2px  2px 2px #000;
+    object-fit:scale-down;
+   transition: all 0.5s ease;
+
+   view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+.product-container img:hover{
+  transform: scale(90%);
+  box-shadow: 6px 6px 20px 3px #BFCFE7, -6px -6px 20px 3px #BFCFE7 ;
+  filter: blur(5px);
+}
+li{
+  width: 200px;
+}
+.product-item {
+  position: relative; 
+  width: 200px;
+}
+
+.product-name {
+  position: absolute;
+  pointer-events: none;
+  bottom: 120px; 
+  left: 45%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000,
+  -2px -2px 2px #000,
+  -2px 2px 2px #000,
+  2px -2px 2px #000;
+  color: var(--texto);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  display: none; 
+  transition: all 0.5s ease;
+}
+
+.product-item:hover .product-name {
+  display: block; 
+  transition: all 0.5s ease;
+}
+.destacados {
+  margin-top: 10px;
+  height: calc(100vh + 9px); /*Aca tendriamos que restarle el footer y el header*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  view-timeline-name: --image ;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+}
+.destacados h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.mas-vendidos{
+  display: flex;
+  width: 900px;
+  height: 200px;
+}
+.mas-vendidos a{
+    display: flex;
+    width: 900px;
+    height: 200px;
+    transition:  .5s ease;
+}
+
+
+.mas-vendidos img {
+  border-radius: 8px;
+  background: rgb(82,92,235);
+background: radial-gradient(circle, rgba(82,92,235,1) 0%, rgba(191,207,231,1) 100%);
+box-shadow:2px 2px 2px 2px #000,
+    -2px -2px   2px 2px #000,
+    -2px 2px  2px 2px  #000,
+    2px -2px  2px 2px #000;
+  width: 0px;
+  flex-grow: 1;
+  opacity: .7;
+  transition:  .5s ease;
+  object-fit:scale-down;
+  padding: 10px;
+}
+.mas-vendidos a:hover > img{
+  padding: 0;
+  margin: 10px;
+  width: 200px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+@media screen and (max-width: 768px) {
+  
+  .inicio > h1 {
+      font-size: 8vw; 
+  }
+  .inicio > h2{
+    font-size: 6vw;
+  }
+  .buscador > h2{
+    font-size: 8vw;
+  }
+  .inputBuscador{
+    width: 150px;
+    height: 30px;
+    font-size: small;
+    border-radius: 20px;
+    border: solid 0.5px var(--texto);
+  }
+  .botonBuscador{
+    width: 50px;
+    height: 30px;
+    font-size: small;
+    border-radius: 20px;
+    border: solid 0.5px var(--texto);
+
+  }
+  .productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-container{
+    width: auto;
+  }
+  .destacados{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .mas-vendidos{
+    height: 120px;
+    width: 70vw;
+    display: flex;
+    overflow-x: auto  ;
+    opacity: 1;
+  }
+  .mas-vendidos::-webkit-scrollbar{
+    width: 0;
+  }
+  .mas-vendidos .prueba{
+    min-width: 110px;
+    height: 110px;
+    line-height: 50px;   
+
+
+  }
+  .mas-vendidos img{
+    opacity: 1 !important;
+  }
+
+  
+}
+
+@keyframes show {
+  from {
+  opacity:0 ;
+  scale: 25%;}
+  to {
+  opacity: 1;
+  scale: 100%;
+  }
+}
