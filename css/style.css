@@ -48,8 +48,8 @@
       background-color: var(--color-button-background) !important;
       transform: scale(0.95);
       box-shadow: 0 0 10px var(--color-difucion);
-
-  main{
+}
+  main {
     color: var(--texto);
     background-color: var(--fondo);
   }
@@ -321,4 +321,11 @@ box-shadow:2px 2px 2px 2px #000,
   scale: 100%;
   }
 
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--botones) !important;
+  border-color: var(--botones) !important;
 }
