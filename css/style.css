@@ -1,247 +1,217 @@
-:root{
-    --color-button: #BFCFE7;
-    --color-button-hover: #525CEB;
-    --color-background: #525CEB;
-    --color-btn-inicio: #3D3B40;
-    --color-difucion:#3d3b40b0;
-    --texto: #BFCFE7;
-    --botones: #525CEB;
-    --fondo: #3D3B40;
+:root {
+  --texto: #bfcfe7;
+  --botones: #525ceb;
+  --fondo: #3d3b40;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Tilt Neon", sans-serif;
-  
-
 }
 .tilt-neon-h1 {
-    font-family: "Tilt Neon", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "XROT" 0,
-      "YROT" 0;
-  }
+  font-family: "Tilt Neon", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "XROT" 0, "YROT" 0;
+}
+main {
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+.inicio {
+  height: calc(
+    100vh - 52px
+  ); /*Adaptar segundo valor de calculo de height a los px del header*/
+  background-image: linear-gradient(to right top, #08080849, #29282873),
+    url(https://www.apple.com/v/home/bm/images/heroes/apple-watch-series-9-anim/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
+  background-position: center;
+  background-size: cover;
+  color: var(--texto);
+}
+.inicio > h1 {
+  font-size: 70px;
+}
 
-.fondo{
-  background-color: var(--color-background);
+.buscador {
+  margin: 50px;
+  height: 30vh;
+
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
-.tit{
-  color:  var(--color-button) !important;
+.buscador > h2 {
+  font-size: 2.5rem;
 }
-.btn-text {
-  color:  var(--color-button) !important;
+.inputBuscador {
+  height: 50px;
+  width: 500px;
+  background-color: var(--botones);
+  color: var(--texto);
+  border-radius: 25px;
+  border: solid 3px var(--texto);
+  padding: 0 20px;
+  font-size: 1.2rem;
 }
-.btn-app:hover {
-  transform: scale(0.95);
-  box-shadow: 0 0 10px var(--color-difucion);
+.inputBuscador::placeholder {
+  color: var(--texto);
 }
-.btn-inicio{
-  background-color: var(--color-btn-inicio) !important;
-  
+.botonBuscador {
+  background-color: var(--botones);
+  color: var(--texto);
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: solid 3px var(--texto);
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  transition: 0.3s ease all;
 }
-.btn-inicio:hover{
-      background-color: var(--color-button-background) !important;
-      transform: scale(0.95);
-      box-shadow: 0 0 10px var(--color-difucion);
+.botonBuscador:hover {
+  transform: scale(90%);
 }
-  main {
-    color: var(--texto);
-    background-color: var(--fondo);
-  }
-  .inicio{    
-    height: calc(100vh - 52px); /*Adaptar segundo valor de calculo de height a los px del header*/
-    background-image:linear-gradient(to right top, #08080849, #29282873   ), url(https://www.apple.com/v/home/bm/images/heroes/apple-watch-series-9-anim/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
-    background-position: center ;
-    background-size: cover ;    
-    color: var(--texto);
-  }
-  .inicio > h1 {
-    font-size: 70px;
-  }
-  
-  .buscador{
-    margin: 50px;
-    height: 30vh;
-    
-    view-timeline-name: --image ;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
-  }
-  .buscador > h2{
-    font-size: 2.5rem;
-  }
-  .inputBuscador{
-    height: 50px;
-    width: 500px;
-    background-color: var(--botones);
-    color: var(--texto);
-    border-radius: 25px;
-    border: solid 3px var(--texto);
-    padding: 0 20px;
-    font-size: 1.2rem;
-  }
-  .inputBuscador::placeholder{      
-    color: var(--texto);    
-  }
-  .botonBuscador{
-    background-color: var(--botones);
-    color: var(--texto);
-    font-size: 1.2rem;
-    border-radius: 25px;
-    border: solid 3px var(--texto);
-    height: 50px;
-    width: 100px;
-    margin: 10px;
-    transition: .3s ease all;
-  }
-  .botonBuscador:hover{
-    transform: scale(90%);
-  }
-  hr {
-    border: 4px solid #525CEB;
-    border-radius: 25px;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 40px;
-    opacity: 1;
+
+hr {
+  border: 4px solid #525ceb;
+  border-radius: 25px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  opacity: 1;
 }
-.productos{
+.productos {
   background-color: var(--fondo);
   height: 100%;
-  width: 100%; 
-  transition: all 0.5s ease; 
-  
+  width: 100%;
+  transition: all 0.5s ease;
 }
-.product-wrapper{
+.product-wrapper {
   margin-top: 32px;
   transition: all 0.5s ease;
 }
-.product-container{
-    list-style: none; 
-    margin: 0;
-    padding: 0;
-    display: grid;
-    width: 70%;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 32px;
-    transition: all 0.5s ease;
-    
+.product-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  transition: all 0.5s ease;
 }
 .product-container img {
-  
-
   border-radius: 8px;
-  background: rgb(82,92,235);
-  background: radial-gradient(circle, rgba(82,92,235,1) 0%, rgba(191,207,231,1) 100%);
-  
-    width: 200px;
-    height: 300px;
-    box-shadow:2px 2px 2px 2px #000,
-    -2px -2px   2px 2px #000,
-    -2px 2px  2px 2px  #000,
-    2px -2px  2px 2px #000;
-    object-fit:scale-down;
-   transition: all 0.5s ease;
+  background: rgb(82, 92, 235);
+  background: radial-gradient(
+    circle,
+    rgba(82, 92, 235, 1) 0%,
+    rgba(191, 207, 231, 1) 100%
+  );
 
-   view-timeline-name: --image ;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
+  width: 200px;
+  height: 300px;
+  box-shadow: 2px 2px 2px 2px #000, -2px -2px 2px 2px #000,
+    -2px 2px 2px 2px #000, 2px -2px 2px 2px #000;
+  object-fit: scale-down;
+  transition: all 0.5s ease;
+
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
-.product-container img:hover{
+.product-container img:hover {
   transform: scale(90%);
-  box-shadow: 6px 6px 20px 3px #BFCFE7, -6px -6px 20px 3px #BFCFE7 ;
+  box-shadow: 6px 6px 20px 3px #bfcfe7, -6px -6px 20px 3px #bfcfe7;
   filter: blur(5px);
 }
-li{
+li {
   width: 200px;
 }
 .product-item {
-  position: relative; 
+  position: relative;
   width: 200px;
 }
 
 .product-name {
   position: absolute;
   pointer-events: none;
-  bottom: 120px; 
+  bottom: 120px;
   left: 45%;
   transform: translateX(-50%);
   font-weight: bold;
-  text-shadow: 2px 2px 2px #000,
-  -2px -2px 2px #000,
-  -2px 2px 2px #000,
-  2px -2px 2px #000;
+  text-shadow: 2px 2px 2px #000, -2px -2px 2px #000, -2px 2px 2px #000,
+    2px -2px 2px #000;
   color: var(--texto);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 20px;
-  display: none; 
+  display: none;
   transition: all 0.5s ease;
 }
 
 .product-item:hover .product-name {
-  display: block; 
+  display: block;
   transition: all 0.5s ease;
 }
 .destacados {
   margin-top: 10px;
-  height: calc(100vh + 9px); /*Aca tendriamos que restarle el footer y el header*/
+  height: calc(
+    100vh + 9px
+  ); /*Aca tendriamos que restarle el footer y el header*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  view-timeline-name: --image ;
-    view-timeline-axis: block;
-    animation-timeline: --image;
-    animation-name: show;
-    animation-range: entry 25% cover 50%;
-    animation-fill-mode: both;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 .destacados h2 {
   font-size: 50px;
   margin-bottom: 40px;
 }
-.mas-vendidos{
+.mas-vendidos {
   display: flex;
   width: 900px;
   height: 200px;
 }
-.mas-vendidos a{
-    display: flex;
-    width: 900px;
-    height: 200px;
-    transition:  .5s ease;
+.mas-vendidos a {
+  display: flex;
+  width: 900px;
+  height: 200px;
+  transition: 0.5s ease;
 }
-
 
 .mas-vendidos img {
   border-radius: 8px;
-  background: rgb(82,92,235);
-background: radial-gradient(circle, rgba(82,92,235,1) 0%, rgba(191,207,231,1) 100%);
-box-shadow:2px 2px 2px 2px #000,
-    -2px -2px   2px 2px #000,
-    -2px 2px  2px 2px  #000,
-    2px -2px  2px 2px #000;
+  background: rgb(82, 92, 235);
+  background: radial-gradient(
+    circle,
+    rgba(82, 92, 235, 1) 0%,
+    rgba(191, 207, 231, 1) 100%
+  );
+  box-shadow: 2px 2px 2px 2px #000, -2px -2px 2px 2px #000,
+    -2px 2px 2px 2px #000, 2px -2px 2px 2px #000;
   width: 0px;
   flex-grow: 1;
-  opacity: .7;
-  transition:  .5s ease;
-  object-fit:scale-down;
+  opacity: 0.7;
+  transition: 0.5s ease;
+  object-fit: scale-down;
   padding: 10px;
 }
-.mas-vendidos a:hover > img{
+.mas-vendidos a:hover > img {
   padding: 0;
   margin: 10px;
   width: 200px;
@@ -249,83 +219,280 @@ box-shadow:2px 2px 2px 2px #000,
   filter: contrast(120%);
 }
 
+/* Agregado por PS */
+.img {
+  object-fit: contain;
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  opacity: 0.9;
+  transition: opacity 0.75s, transform 1.4s;
+  position: relative;
+}
+
+.img:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.box {
+  height: auto;
+  border: 3px solid #dddddd18;
+  background-color: #3d3b40;
+  filter: brightness(80%);
+  text-align: center;
+  padding: 50px;
+  border-radius: 30px;
+  margin-bottom: 90px;
+}
+
+.box-invis {
+  text-align: center;
+}
+
+.box p {
+  font-size: 24px;
+  margin: 10px;
+  margin-top: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.texto-centrado {
+  text-align: center;
+  line-height: 100vw;
+  color: var(--texto);
+}
+
+.imagen {
+  max-width: 100%;
+}
+
+.botoncomprar {
+  background-color: var(--botones);
+  color: var(--texto);
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: solid 3px var(--texto);
+  height: 50px;
+  width: 500px;
+  margin: 10px;
+  transition: 0.3s ease all;
+}
+.botoncomprar:hover {
+  transform: scale(95%);
+  box-shadow: #000000;
+  background-color: #525ceba2;
+}
+
+.tamanio2 {
+  font-size: 2rem;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 40px;
+  font-size: 1.3rem;
+}
+
+td {
+  vertical-align: top;
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.boton-tabla {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--botones);
+  color: var(--texto);
+  cursor: cell;
+  padding: 10px;
+  border: solid;
+  text-align: center;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s ease all;
+}
+
+.active,
+.boton-tabla:hover {
+  background-color: #525ceba2;
+}
+
+.tabla-contenido {
+  padding: 18px;
+  border: 3px solid #8d858541;
+  background-color: #3d3b40;
+  filter: brightness(80%);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.esp {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 @media screen and (max-width: 768px) {
-  
   .inicio > h1 {
-      font-size: 8vw; 
-  }
-  .inicio > h2{
-    font-size: 6vw;
-  }
-  .buscador > h2{
     font-size: 8vw;
   }
-  .inputBuscador{
+  .inicio > h2 {
+    font-size: 6vw;
+  }
+  .buscador > h2 {
+    font-size: 8vw;
+  }
+  .inputBuscador {
     width: 150px;
     height: 30px;
     font-size: small;
     border-radius: 20px;
     border: solid 0.5px var(--texto);
   }
-  .botonBuscador{
+  .botonBuscador {
     width: 50px;
     height: 30px;
     font-size: small;
     border-radius: 20px;
     border: solid 0.5px var(--texto);
-
   }
-  .productos{
+  .productos {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .product-container{
+  .product-container {
     width: auto;
   }
-  .destacados{
+  .destacados {
     text-align: center;
     align-items: center;
     justify-content: center;
   }
-  .mas-vendidos{
+  .mas-vendidos {
     height: 120px;
     width: 70vw;
     display: flex;
-    overflow-x: auto  ;
+    overflow-x: auto;
     opacity: 1;
   }
-  .mas-vendidos::-webkit-scrollbar{
+  .mas-vendidos::-webkit-scrollbar {
     width: 0;
   }
-  .mas-vendidos .prueba{
+  .mas-vendidos .prueba {
     min-width: 110px;
     height: 110px;
-    line-height: 50px;   
-
-
+    line-height: 50px;
   }
-  .mas-vendidos img{
+  .mas-vendidos img {
     opacity: 1 !important;
   }
 
+  /*Agregado por PS*/
+  .botoncomprar {
+    width: 400px;
+    height: 40px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: solid 2px var(--texto);
+  }
+  .tamanio2 {
+    font-size: 1.5rem;
+  }
+
+  .box p {
+    font-size: 17px;
+    margin: 5px;
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .box {
+    height: auto;
+    border: 2px solid #dddddd18;
+    background-color: #3d3b40;
+    filter: brightness(80%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+  }
+
+  th {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    font-size: 1.1rem;
+  }
   
+  td {
+    vertical-align: top;
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 0.9rem;
+  }
+  
+  .boton-tabla {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--botones);
+    color: var(--texto);
+    cursor: cell;
+    padding: 10px;
+    border: solid;
+    text-align: center;
+    outline: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+  }  
+  
+  .active,
+  .boton-tabla:hover {
+    background-color: #525ceba2;
+    transition: 0.3s ease all;
+  }
+  table {
+    margin-left: 5%;
+    margin-right: 5%;
+    border-collapse: collapse;
+    width: 90%;
+  }
+
+  .tabla-contenido {
+    padding: 10px;
+    border: 2px solid #8d858544;
+    background-color: #3d3b4088;
+    filter: brightness(70%);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .esp {
+ margin: 40px;
+  }
+
 }
 
 @keyframes show {
   from {
-  opacity:0 ;
-  scale: 25%;}
-  to {
-  opacity: 1;
-  scale: 100%;
+    opacity: 0;
+    scale: 25%;
   }
-
-}
-#btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--botones) !important;
-  border-color: var(--botones) !important;
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
