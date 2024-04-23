@@ -9,5 +9,5 @@
 
 ## Descripción 
 
-La idea es mantener el formato que se utiliza de ejemplo y el mismo se fue utilizando en clase, pero la tematica va hacer una empresa de venta de productos electronicos, llamado Black-White. 
+La idea es mantener el formato que se utiliza de ejemplo y el mismo se fue utilizando en clase, pero la tematica va a ser una empresa de venta de productos electronicos, llamado Black-White. 
 
