@@ -1,7 +1,12 @@
-:root {
-  --texto: #bfcfe7;
-  --botones: #525ceb;
-  --fondo: #3d3b40;
+:root{
+  --color-button: #BFCFE7;
+  --color-button-hover: #525CEB;
+  --color-background: #525CEB;
+  --color-btn-inicio: #3D3B40;
+  --color-difucion:#3d3b40b0;
+  --texto: #BFCFE7;
+  --botones: #525CEB;
+  --fondo: #3D3B40;
 }
 * {
   margin: 0;
@@ -15,6 +20,28 @@
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "XROT" 0, "YROT" 0;
+}
+.fondo{
+  background-color: var(--color-background);
+}
+.tit{
+  color:  var(--color-button) !important;
+}
+.btn-text {
+  color:  var(--color-button) !important;
+}
+.btn-app:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px var(--color-difucion);
+}
+.btn-inicio{
+  background-color: var(--color-btn-inicio) !important;
+  
+}
+.btn-inicio:hover{
+      background-color: var(--color-button-background) !important;
+      transform: scale(0.95);
+      box-shadow: 0 0 10px var(--color-difucion);
 }
 main {
   color: var(--texto);
@@ -495,4 +522,12 @@ td {
     opacity: 1;
     scale: 100%;
   }
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--botones) !important;
+  border-color: var(--botones) !important;
 }
