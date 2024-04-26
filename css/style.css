@@ -1,6 +1,6 @@
 :root{
   --color-button: #BFCFE7;
-  --color-button-hover: #525CEB;
+  --color-button-hover: #525ceb;
   --color-background: #525CEB;
   --color-btn-inicio: #3D3B40;
   --color-difucion:#3d3b40b0;
@@ -43,9 +43,18 @@
       transform: scale(0.95);
       box-shadow: 0 0 10px var(--color-difucion);
 }
-main {
+#main {
   color: var(--texto);
   background-color: var(--fondo);
+}
+.registre{
+  background-color: #000;
+  background-image: linear-gradient(to right top, rgba(0,0,0,0), var(--color-background)), url("../img/background.webp");
+  background-repeat: repeat, repeat;
+  background-attachment: scroll, scroll;
+  background-size: cover;
+  background-position: center ;
+
 }
 .inicio {
   height: calc(
@@ -530,4 +539,30 @@ td {
   right: 20px;
   background-color: var(--botones) !important;
   border-color: var(--botones) !important;
+}
+.form{
+  background-color: var(--fondo) !important;
+  border-radius: 0.5rem !important;
+  border: 3px solid var(--texto) !important;
+}
+.input{
+  background-color: var(--fondo) !important;
+  border: 2px solid var(--botones) !important;
+  color: var(--texto) !important;
+}
+.input::placeholder{
+  color: var(--texto) !important;
+}
+.btn-form{
+  background-color: var(--botones);
+  color: var(--texto);
+}
+.btn-form:hover{
+  box-shadow: 0 0 10px var(--texto) !important;
+  background-color: var(--botones);
+  color: var(--texto);
+}
+.terminos{
+  font-size: 0.80rem !important;
+  color: var(--texto);
 }
