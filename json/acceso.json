@@ -1,0 +1,22 @@
+{
+    "members": [
+      {
+        "user": "juaneroclaw@gmail.com",
+        "password":"1234QWER",
+        "name": "Juan Ezequiel",
+        "acceso":false
+      },
+      {
+        "user": "philipp_schuster@hotmail.de",
+        "password": "1234QWER",
+        "name": "Philipp",
+        "acceso":false
+      },
+      {
+        "user": "maxmaxias7@gmail.com",
+        "password": "1234QWER",
+        "name": "Andrea Veronica",
+        "acceso":false
+      }
+    ]
+  }
