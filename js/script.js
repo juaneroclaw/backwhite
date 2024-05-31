@@ -18,7 +18,7 @@ function scrollFunction() {
 
 async function ingresa() {
   try {
-    fetch('./json/acceso.json')
+    fetch('../json/acceso.json')
     .then(response => response.json())
     .then(data =>{
       validar(data) 
