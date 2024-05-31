@@ -33,17 +33,17 @@
                     <div class="card text-start form p-5 my-1">
                         <div class="card-body p-5 my-1">
                             <h1 class="card-title mb-3 tit">Iniciar Sesión</h1>
-                            <form action="" class="card-text py-5">
+                            <form action="" class="card-text py-5" >
                                 <div class="row justify-content-center">
                                     <div class="col-12">
                                         <div class="mb-4">
-                                            <input type="text" class="form-control input" required name="user" placeholder="Usuario">
+                                            <input type="text" class="form-control input" name="user" id="user" placeholder="Usuario">
                                         </div>
                                         <div class="mb-4">
-                                            <input type="password" class="form-control input" required name="password" placeholder="Contraseña">
+                                            <input type="password" class="form-control input" name="password" id="password" placeholder="Contraseña">
                                         </div>
                                         <div class="mb-3">
-                                            <input type="submit" class="btn btn-form mx-3" value="Inciar Sesión">
+                                            <input type="button" class="btn btn-form mx-3" value="Inciar Sesión" onclick="ingresa()">
                                         </div> 
                                         <div class="mb-3">
                                             <a href="/html/registre.html" class="terminos nav-link">Registrarse</a>
@@ -56,6 +56,19 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="modalMenssage" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Error</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="menssageContent">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
 
     </main>
     <script src="https://kit.fontawesome.com/7b5e0c5a94.js" crossorigin="anonymous"></script>

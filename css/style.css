@@ -380,6 +380,70 @@ td {
   margin-left: 20%;
   margin-right: 20%;
 }
+.api{
+  height: 200px;
+}
+img{
+  width: 320px;
+  height: auto;
+object-fit:cover;
+filter : drop-shadow( 0 10px 10px black);
+transition: 0.3s ease all;
+
+}
+.contenedor{
+  
+  display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 50px;
+padding: 20px;
+transition: 0.3s ease all;
+}
+.carrito-container{
+  padding: 10px;
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+.contenedor>div{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 700px;
+  height: 350px;
+  padding: 10px;
+  padding-right: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75%);
+background-color: var(--color-background);
+border-radius: 20px;
+transition: 0.3s ease all;
+
+}
+.informacion{
+  height: 150px;
+  display: flex;
+  justify-content: right;  
+  flex-direction: column;
+  transition: 0.3s ease all;
+  }
+.nombre{
+  font-size: 30px;
+  transition: 0.3s ease all;
+}
+.descripcion{
+  text-align:justify;
+  transition: 0.3s ease all;
+}
+.carrito{
+  height: 100%;
+  background-color: var(--fondo);
+  
+  
+}
 
 @media screen and (max-width: 768px) {
   .inicio > h1 {
@@ -399,7 +463,7 @@ td {
     border: solid 0.5px var(--texto);
   }
   .botonBuscador {
-    width: 50px;
+   
     height: 30px;
     font-size: small;
     border-radius: 20px;
@@ -519,6 +583,55 @@ td {
   .esp {
  margin: 40px;
   }
+  img{
+    width: 320px;
+    height: auto;
+  object-fit:cover;
+  transition: 0.3s ease all;
+  
+  }
+  .contenedor{
+    
+    display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+  transition: 0.3s ease all;
+  }
+  .carrito-container{
+    padding: 10px;
+    align-items: center;
+    transition: 0.3s ease all;
+    
+  }
+  .contenedor>div{
+    display: flex;
+    flex-direction: column;
+    
+    width: 300px;
+    height: 650px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75%);
+  background-color: var(--color-background);
+  border-radius: 20px;
+  transition: 0.3s ease all;
+  
+  }
+  .informacion{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease all;
+    }
+  .nombre{
+    font-size: 20px;
+    transition: 0.3s ease all;
+  }
+  
+  
+
 
 }
 
@@ -566,3 +679,11 @@ td {
   font-size: 0.80rem !important;
   color: var(--texto);
 }
+.hover:hover{
+ transform: scale(115%);  
+}
+
+
+
+
+
