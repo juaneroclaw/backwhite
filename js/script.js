@@ -31,7 +31,7 @@ async function ingresa() {
 function validar(datos){
   const mail = document.getElementById('user').value;
   const password = document.getElementById('password').value;
-  const validarUser = validarEmail(mail)
+  var validarUser = validarEmail(mail)
   var validarPass = !password ? 'El campo password es Obligatorio' : ''
   if(validarUser=='' && validarPass==''){
     const listUsuarios = datos.members.find(objeto => objeto.user === mail)
